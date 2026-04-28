@@ -1,4 +1,5 @@
 import { use } from "react";
+import { toast } from "react-toastify";
 
 const dataPromise = fetch("../../public/data.json").then(res => res.json());
 //console.log(dataPromise)
@@ -8,7 +9,7 @@ const ProductsCart = ({ carts, setCarts }) => {
     const buyNow = (cartData) => {
         const isExist = carts.find(cart=>cart.name===cartData.name)
         if(isExist){
-            alert("ok")
+            toast.success(`${cartData.name} is already added`)
             return;
         }
         setCarts([...carts, cartData])

@@ -5,6 +5,7 @@ import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 import ProductsCart from './components/ProductsCart'
 import State from './components/State'
+import { ToastContainer } from 'react-toastify'
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
         <AllProducts carts={carts}></AllProducts>
         <ProductsCart carts={carts} setCarts={setCarts}></ProductsCart>
 
-
+        <ToastContainer></ToastContainer>
     </>
   )
 }
