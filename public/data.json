@@ -50,7 +50,7 @@
     "description": "Get more profile views and opportunities with AI-powered LinkedIn optimization.",
     "price": 39,
     "period": "one-time",
-    "tag": "",
+    "tag": "New",
     "tagType": "",
     "features": [
       "Profile Score Analysis",
@@ -65,7 +65,7 @@
     "description": "Complete career toolkit including resume, cover letter, LinkedIn optimization & interview prep.",
     "price": 79,
     "period": "one-time",
-    "tag": "Best Value",
+    "tag": "Popular",
     "tagType": "popular",
     "features": [
       "Everything in Pro Resume",
@@ -110,7 +110,7 @@
     "description": "AI-powered interview preparation with real-time feedback and mock interviews.",
     "price": 25,
     "period": "one-time",
-    "tag": "",
+    "tag": "Best Seller",
     "tagType": "",
     "features": [
       "500+ Common Questions",
@@ -140,7 +140,7 @@
     "description": "Team license for companies and career coaches helping multiple candidates.",
     "price": 299,
     "period": "yearly",
-    "tag": "",
+    "tag": "New",
     "tagType": "",
     "features": [
       "Up to 10 Team Members",
