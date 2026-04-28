@@ -10,6 +10,7 @@ import { ToastContainer } from 'react-toastify'
 function App() {
 
   const [carts,setCarts]=useState([]);
+  const [toggleBtn, setToggleBtn]=useState(false)
 
   return (
     <>
@@ -17,8 +18,8 @@ function App() {
         <Navbar carts={carts}></Navbar>
         <Hero></Hero>
         <State></State>
-        <AllProducts carts={carts}></AllProducts>
-        <ProductsCart carts={carts} setCarts={setCarts}></ProductsCart>
+        <AllProducts carts={carts} toggleBtn={toggleBtn} setToggleBtn={setToggleBtn}></AllProducts>
+        <ProductsCart carts={carts} setCarts={setCarts} ></ProductsCart>
 
         <ToastContainer></ToastContainer>
     </>

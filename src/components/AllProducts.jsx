@@ -1,5 +1,14 @@
 
-const AllProducts = ({carts}) => {
+const AllProducts = ({ carts, toggleBtn, setToggleBtn }) => {
+
+    const productsBtn = () => {
+        setToggleBtn(false)
+    }
+
+    const cartsBtn = () => {
+        setToggleBtn(true)
+    }
+    console.log(toggleBtn);
     return (
         <div>
 
@@ -12,8 +21,14 @@ const AllProducts = ({carts}) => {
             </div>
             {/* dynamic */}
             <div className="flex gap-7 justify-center">
-                <button className="btn btn-primary">Products</button>
-                <button className="btn">Cart({carts.length})</button>
+                <button onClick={productsBtn}
+                    className="btn bg-linear-to-r/hsl from-blue-500 to-purple-500 text-white rounded-full">Products
+                </button>
+
+
+                <button onClick={cartsBtn}
+                    className="btn rounded-full">Cart({carts.length})
+                </button>
             </div>
 
         </div>

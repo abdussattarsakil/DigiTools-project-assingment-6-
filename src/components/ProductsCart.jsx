@@ -5,17 +5,14 @@ const dataPromise = fetch("../../public/data.json").then(res => res.json());
 //console.log(dataPromise)
 const ProductsCart = ({ carts, setCarts }) => {
     const data = use(dataPromise)
-
     const buyNow = (cartData) => {
-        const isExist = carts.find(cart=>cart.name===cartData.name)
-        if(isExist){
-            toast.success(`${cartData.name} is already added`)
+        const isExist = carts.find(cart => cart.name === cartData.name)
+        if (isExist) {
+            toast.info(`${cartData.name} is already added`)
             return;
         }
         setCarts([...carts, cartData])
     }
-
-    console.log(carts)
 
     return (
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 w-fit m-auto ">
@@ -51,7 +48,8 @@ const ProductsCart = ({ carts, setCarts }) => {
                                 </ul>
                                 <div className="mt-6">
                                     <button onClick={() => buyNow(cartData)}
-                                        className="btn text-white btn-block bg-linear-to-r/hsl from-blue-500 to-purple-500">Buy Now</button>
+                                        className={`rounded-full ${carts.find(cart => cart.name === cartData.name) ? 'btn text-white btn-block bg-linear-to-r/hsl from-purple-400 to-purple-500' : 'btn text-white btn-block bg-linear-to-r/hsl from-purple-500 to-blue-500'}`}>
+                                        {carts.find(cart => cart.name === cartData.name) ? 'Added to cart' : 'Buy Now'}</button>
                                 </div>
                             </div>
                         </div>
