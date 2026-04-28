@@ -5,11 +5,11 @@ const dataPromise = fetch("../../public/data.json").then(res => res.json());
 const ProductsCart = () => {
     const data = use(dataPromise)
     return (
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 m-auto w-fit gap-5">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 w-fit m-auto ">
             {
                 data.map(cartData => (
                     <div>
-                        <div className="card w-96 bg-base-100 shadow-sm">
+                        <div className="card w-80 bg-base-100 shadow-sm">
                             <div className="card-body">
                                 <div className="flex justify-between">
 

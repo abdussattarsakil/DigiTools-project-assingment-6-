@@ -9,12 +9,13 @@ function App() {
 
   return (
     <>
+      
+        <Navbar></Navbar>
+        <Hero></Hero>
+        <State></State>
+        <AllProducts></AllProducts>
+        <ProductsCart></ProductsCart>
 
-      <Navbar></Navbar>
-      <Hero></Hero>
-      <State></State>
-      <AllProducts></AllProducts>
-      <ProductsCart></ProductsCart>
 
     </>
   )
