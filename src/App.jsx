@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 import AllProducts from './components/AllProducts'
 import Hero from './components/Hero'
@@ -7,14 +8,16 @@ import State from './components/State'
 
 function App() {
 
+  const [carts,setCarts]=useState([]);
+
   return (
     <>
       
-        <Navbar></Navbar>
+        <Navbar carts={carts}></Navbar>
         <Hero></Hero>
         <State></State>
-        <AllProducts></AllProducts>
-        <ProductsCart></ProductsCart>
+        <AllProducts carts={carts}></AllProducts>
+        <ProductsCart carts={carts} setCarts={setCarts}></ProductsCart>
 
 
     </>

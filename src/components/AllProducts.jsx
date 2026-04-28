@@ -1,5 +1,5 @@
 
-const AllProducts = () => {
+const AllProducts = ({carts}) => {
     return (
         <div>
 
@@ -13,7 +13,7 @@ const AllProducts = () => {
             {/* dynamic */}
             <div className="flex gap-7 justify-center">
                 <button className="btn btn-primary">Products</button>
-                <button className="btn">Cart(0)</button>
+                <button className="btn">Cart({carts.length})</button>
             </div>
 
         </div>

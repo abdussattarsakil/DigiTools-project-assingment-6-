@@ -2,8 +2,20 @@ import { use } from "react";
 
 const dataPromise = fetch("../../public/data.json").then(res => res.json());
 //console.log(dataPromise)
-const ProductsCart = () => {
+const ProductsCart = ({ carts, setCarts }) => {
     const data = use(dataPromise)
+
+    const buyNow = (cartData) => {
+        const isExist = carts.find(cart=>cart.name===cartData.name)
+        if(isExist){
+            alert("ok")
+            return;
+        }
+        setCarts([...carts, cartData])
+    }
+
+    console.log(carts)
+
     return (
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-4 w-fit m-auto ">
             {
@@ -37,7 +49,8 @@ const ProductsCart = () => {
 
                                 </ul>
                                 <div className="mt-6">
-                                    <button className="btn text-white btn-block bg-linear-to-r/hsl from-blue-500 to-purple-500">Buy Now</button>
+                                    <button onClick={() => buyNow(cartData)}
+                                        className="btn text-white btn-block bg-linear-to-r/hsl from-blue-500 to-purple-500">Buy Now</button>
                                 </div>
                             </div>
                         </div>
