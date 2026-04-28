@@ -6,22 +6,30 @@ import Navbar from './components/Navbar'
 import ProductsCart from './components/ProductsCart'
 import State from './components/State'
 import { ToastContainer } from 'react-toastify'
+import Cart from './components/Cart'
 
 function App() {
 
-  const [carts,setCarts]=useState([]);
-  const [toggleBtn, setToggleBtn]=useState(false)
+  const [carts, setCarts] = useState([]);
+  const [toggleBtn, setToggleBtn] = useState(false)
 
   return (
     <>
-      
-        <Navbar carts={carts}></Navbar>
-        <Hero></Hero>
-        <State></State>
-        <AllProducts carts={carts} toggleBtn={toggleBtn} setToggleBtn={setToggleBtn}></AllProducts>
-        <ProductsCart carts={carts} setCarts={setCarts} ></ProductsCart>
 
-        <ToastContainer></ToastContainer>
+      <Navbar carts={carts}></Navbar>
+      <Hero></Hero>
+      <State></State>
+      <AllProducts carts={carts} toggleBtn={toggleBtn} setToggleBtn={setToggleBtn}></AllProducts>
+      <div className={`${toggleBtn && 'hidden'}`}>
+        <ProductsCart carts={carts} setCarts={setCarts} ></ProductsCart>
+      </div>
+
+      <div className={`${toggleBtn?'':'hidden'}`}>
+        <Cart carts={carts}></Cart>
+      </div>
+
+
+      <ToastContainer></ToastContainer>
     </>
   )
 }

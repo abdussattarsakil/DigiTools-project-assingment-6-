@@ -24,8 +24,7 @@ const AllProducts = ({ carts, toggleBtn, setToggleBtn }) => {
                 <button onClick={productsBtn}
                     className="btn bg-linear-to-r/hsl from-blue-500 to-purple-500 text-white rounded-full">Products
                 </button>
-
-
+                
                 <button onClick={cartsBtn}
                     className="btn rounded-full">Cart({carts.length})
                 </button>
