@@ -1,6 +1,6 @@
 const Navbar = () => {
     return (
-        <div className="">
+        <div className="mb-20">
             <div className="navbar bg-base-100 shadow-sm">
                 <div className="navbar-start lg:justify-center">
                     <div className="dropdown ">
