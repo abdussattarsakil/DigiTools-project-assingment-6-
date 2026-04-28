@@ -2,7 +2,7 @@ import HeroImg from "/banner.png"
 import PlayIcon from "/Play.png"
 const Hero = () => {
     return (
-        <div className="md:flex gap-5 justify-center">
+        <div className="md:flex justify-around">
             {/* left side */}
             <div className="my-auto text-wrap">
                 <div className="">
