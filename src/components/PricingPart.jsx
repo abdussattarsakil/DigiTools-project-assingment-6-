@@ -9,7 +9,7 @@ const PricingPart = () => {
             </div>
             {/* cart */}
 
-            <div className="md:flex justify-center gap-5">
+            <div className="md:flex justify-center gap-5 mb-20">
                 <div className="card w-80 bg-base-200 shadow-lg m-auto mb-4 md:m-0">
                     <div className="card-body">
                         <div className="flex flex-col">
@@ -51,7 +51,7 @@ const PricingPart = () => {
 
 
                 <div className="card w-80 bg-linear-to-r/hsl from-blue-500 to-purple-500 shadow-lg m-auto mb-4 md:m-0">
-                    <div className="card-body relative">                        
+                    <div className="card-body relative">
                         <span className="badge badge-md badge-warning absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-pulse">Most Popular</span>
                         <div className="flex flex-col">
                             <h2 className="text-3xl font-bold text-white">Pro</h2>
@@ -129,15 +129,34 @@ const PricingPart = () => {
                                 <svg xmlns="http://www.w3.org/2000/svg" className="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
                                 <span>Developer Pro & SaaS kits</span>
                             </li>
-                            
+
                         </ul>
                         <div className="mt-6">
-                             <button className="btn w-full rounded-full text-white bg-linear-to-r/hsl from-blue-500 to-purple-500">Contact Sales</button>
+                            <button className="btn w-full rounded-full text-white bg-linear-to-r/hsl from-blue-500 to-purple-500">Contact Sales</button>
                         </div>
                     </div>
                 </div>
 
 
+            </div>
+
+
+
+
+            <div className="bg-linear-to-r/hsl from-blue-500 to-purple-500 text-center py-15 text-white space-y-5">
+                <div>
+                    <h1 className="text-4xl font-extrabold">
+                        Ready to Transform Your Workflow?
+                    </h1>
+                    <h2 className="text-xs my-2 text-gray-300">
+                        Join thousands of professionals who are already using Digitools to work smarter. <br /> Start your free trial today.
+                    </h2>
+                </div>
+                <div className="space-x-6">
+                    <button className="btn rounded-full text-purple-500">Explore Products</button>
+                    <button className="rounded-full py-1 px-6 text-white border border-white">View Pricing</button>
+                </div>
+                <h2 className="text-gray-300 text-xs">14-day free trial • No credit card required • Cancel anytime</h2>
             </div>
         </div>
     );
