@@ -4,10 +4,10 @@ const Hero = () => {
     return (
         <div className="md:flex justify-around">
             {/* left side */}
-            <div className="my-auto text-wrap">
+            <div className="my-auto text-wrap space-y-5">
                 <div className="">
-                    <p >New: AI-Powered Tools Available</p>
-                    <h1 className="text-5xl font-extrabold text-wrap">Supercharge Your <br /> Digital Workflow</h1>
+                    <h2 className="mb-2 badge badge-lg p-4 rounded-full bg-purple-200 text-blue-600"> <span className="rounded-full p-1 bg-linear-to-r/hsl from-blue-500 to-purple-500 "></span>New: AI-Powered Tools Available</h2>
+                    <h1 className="mb-2 text-5xl font-extrabold text-wrap">Supercharge Your <br /> Digital Workflow</h1>
                     <p>Access premium AI tools, design assets, templates, and productivity</p>
                     <p>software—all in one place. Start creating faster today.</p>
                     <p>Explore Products</p>
@@ -15,8 +15,8 @@ const Hero = () => {
                 </div>
 
                 <div className="flex gap-5">
-                    <button>Explore Products</button>
-                    <button className="flex flex-wrap "><img className="h-2/3 m-auto w-fit" src={PlayIcon} alt="Demo Play Button" />Watch Demo</button>
+                    <button className="btn rounded-full bg-linear-to-r/hsl from-blue-500 to-purple-500 text-white">Explore Products</button>
+                    <button className="btn text-purple-700 border-purple-600 rounded-full "><img className="m-auto " src={PlayIcon} alt="Demo Play Button" />Watch Demo</button>
                 </div>
             </div>
 

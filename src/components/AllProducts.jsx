@@ -12,15 +12,15 @@ const AllProducts = ({ carts, toggleBtn, setToggleBtn }) => {
     return (
         <div>
 
-            <div className="text-center">
+            <div className="text-center space-y-3">
                 {/* static */}
-                <h1>Premium Digital Tools</h1>
+                <h1 className="text-4xl font-bold">Premium Digital Tools</h1>
                 <p>
                     Choose from our curated collection of premium digital products designed <br /> to boost your productivity and creativity.
                 </p>
             </div>
             {/* dynamic */}
-            <div className="flex gap-7 justify-center">
+            <div className="flex gap-7 justify-center mt-5">
                 <button onClick={productsBtn}
                     className={`${toggleBtn?'btn rounded-full':'btn bg-linear-to-r/hsl from-blue-500 to-purple-500 text-white rounded-full'}`}>Products
                 </button>
