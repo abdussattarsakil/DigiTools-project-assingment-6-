@@ -7,6 +7,7 @@ import ProductsCart from './components/ProductsCart'
 import State from './components/State'
 import { ToastContainer } from 'react-toastify'
 import Cart from './components/Cart'
+import Steps from './components/Steps'
 
 function App() {
 
@@ -18,16 +19,21 @@ function App() {
 
       <Navbar carts={carts}></Navbar>
       <Hero></Hero>
-      <State></State>
-      <AllProducts carts={carts} toggleBtn={toggleBtn} setToggleBtn={setToggleBtn}></AllProducts>
-      <div className={`${toggleBtn && 'hidden'}`}>
-        <ProductsCart carts={carts} setCarts={setCarts} ></ProductsCart>
-      </div>
 
-      <div className={`${toggleBtn?'':'hidden'}`}>
-        <Cart carts={carts} setCarts={setCarts}></Cart>
-      </div>
+      <div className='space-y-12'>
+        <State></State>
+        <AllProducts carts={carts} toggleBtn={toggleBtn} setToggleBtn={setToggleBtn}></AllProducts>
+        <div className={`${toggleBtn && 'hidden'}`}>
+          <ProductsCart carts={carts} setCarts={setCarts} ></ProductsCart>
+        </div>
 
+        <div className={`${toggleBtn ? '' : 'hidden'}`}>
+          <Cart carts={carts} setCarts={setCarts}></Cart>
+        </div>
+
+        <Steps></Steps>
+
+      </div>
 
       <ToastContainer></ToastContainer>
     </>
