@@ -25,7 +25,7 @@ function App() {
       </div>
 
       <div className={`${toggleBtn?'':'hidden'}`}>
-        <Cart carts={carts}></Cart>
+        <Cart carts={carts} setCarts={setCarts}></Cart>
       </div>
 
 

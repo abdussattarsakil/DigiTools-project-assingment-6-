@@ -1,4 +1,9 @@
-const Cart = ({ carts }) => {
+const Cart = ({ carts, setCarts }) => {
+    const removeCart = (cartName) => {
+        console.log(cartName);
+        const removeCart = carts.filter(cart => cart.name !== cartName)
+        setCarts(removeCart)
+    }
     return (
         <div>
             <div className="card container bg-base-100 shadow-sm m-auto">
@@ -22,7 +27,7 @@ const Cart = ({ carts }) => {
 
                                         {/* Right Side */}
                                         <div>
-                                            <p className="text-red-500 cursor-pointer border border-gray-400 rounded-full p-1">Remove</p>
+                                            <p onClick={() => removeCart(cart.name)} className="text-red-500 cursor-pointer border border-gray-400 rounded-full p-1">Remove</p>
                                         </div>
                                     </div>
                                 </div>
