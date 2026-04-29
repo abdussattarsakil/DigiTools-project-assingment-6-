@@ -1,9 +1,16 @@
+import { toast } from "react-toastify";
 import emptyCard from "/package.png"
 const Cart = ({ carts, setCarts }) => {
     const removeCart = (cartName) => {
         console.log(cartName);
         const removeCart = carts.filter(cart => cart.name !== cartName)
         setCarts(removeCart)
+        toast.warning(`${cartName} is remove from your cart`);
+    }
+
+    const checkout=()=>{
+        setCarts([]);
+        toast.info(`All carts successfully checkout`);
     }
     return (
         <div>
@@ -28,7 +35,7 @@ const Cart = ({ carts, setCarts }) => {
 
                                         {/* Right Side */}
                                         <div>
-                                            <p onClick={() => removeCart(cart.name)} className="text-red-500 cursor-pointer border border-gray-400 rounded-full p-1">Remove</p>
+                                            <h2 onClick={() => removeCart(cart.name)} className="text-red-500 cursor-pointer border border-gray-400 rounded-full p-1">Remove</h2>
                                         </div>
                                     </div>
                                 </div>
@@ -39,7 +46,9 @@ const Cart = ({ carts, setCarts }) => {
                             <h2 className="text-xl">Total</h2>
                             <h2 className="text-xl">${carts.reduce((total, cart) => total + cart.price, 0)}</h2>
                         </div>
-                        <button className="btn rounded-full w-full bg-linear-to-r/hsl from-blue-500 to-purple-500 text-white">Proceed to Checkout</button>
+                        <button onClick={()=>checkout()}
+                         className="btn rounded-full w-full bg-linear-to-r/hsl from-blue-500 to-purple-500 text-white">
+                        Proceed to Checkout</button>
                     </div>
 
 

@@ -11,7 +11,11 @@ const ProductsCart = ({ carts, setCarts }) => {
             toast.info(`${cartData.name} is already added`)
             return;
         }
-        setCarts([...carts, cartData])
+        else{
+            setCarts([...carts, cartData])
+            toast.success(`${cartData.name} is already added`)
+        }
+        
     }
 
     return (
