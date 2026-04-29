@@ -1,5 +1,7 @@
 # 🎯 Digital Tools Marketplace
 
+# Live link: https://digitools-by-abdus-sattar.netlify.app
+
 ## 📌 Project Overview
 
 Digital Tools Marketplace is a modern and responsive web application where users can explore and purchase premium digital tools such as design software, productivity apps, and development resources. The platform provides a clean UI, smooth user experience, and dynamic cart functionality to simulate a real-world buying system.
