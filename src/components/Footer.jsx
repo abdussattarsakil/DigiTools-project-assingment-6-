@@ -2,7 +2,7 @@ const Footer = () => {
     return (
         <div className="bg-indigo-950 text-base-content p-10">
 
-            <footer className="footer sm:footer-horizontal ">
+            <footer className="footer sm:footer-horizontal container m-auto">
                 <aside>
                     <h1 className="text-4xl font-bold text-white">
                         DigiTools
@@ -74,7 +74,7 @@ const Footer = () => {
             </footer>
 
             <hr className="border-t border-gray-600 my-5" />
-            <div className="md:flex justify-between">
+            <div className="md:flex justify-between container m-auto">
                 <p className="">
                     © 2026 Digitools. All rights reserved.
                 </p>
