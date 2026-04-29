@@ -1,3 +1,4 @@
+import emptyCard from "/package.png"
 const Cart = ({ carts, setCarts }) => {
     const removeCart = (cartName) => {
         console.log(cartName);
@@ -8,8 +9,8 @@ const Cart = ({ carts, setCarts }) => {
         <div>
             <div className="card container bg-base-100 shadow-sm m-auto">
                 <div className="card-body">
-                    <h2>Your Cart</h2>
-                    <div className="space-y-3 ">
+                    <h2 className="text-xl font-bold bg-linear-to-r/hsl from-purple-600 to-blue-500 bg-clip-text text-transparent">Your Cart</h2>
+                    <div className={`${carts.length === 0 ? 'hidden' : 'space-y-3'}`}>
                         {
                             carts.map(cart => (
                                 <div className="card bg-base-200 shadow-sm p-3">
@@ -40,9 +41,23 @@ const Cart = ({ carts, setCarts }) => {
                         </div>
                         <button className="btn rounded-full w-full bg-linear-to-r/hsl from-blue-500 to-purple-500 text-white">Proceed to Checkout</button>
                     </div>
+
+
+                    {/* no cart available */}
+                    <div className={`${carts.length !== 0 && 'hidden'}`}>
+                        <div className="card-body">
+                            <h2 className="card-title text-3xl bg-linear-to-r/hsl from-purple-600 to-red-400 bg-clip-text text-transparent justify-center">Your cart is empty</h2>
+
+                            <img className="w-fit m-auto"
+                                src={emptyCard}
+                                alt="empty card" />
+
+                            <p className="text-center text-xl bg-linear-to-r/hsl from-purple-600 to-red-400 bg-clip-text text-transparent">Start exploring to find the perfect tools for your needs!</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
