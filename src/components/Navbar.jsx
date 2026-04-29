@@ -33,7 +33,7 @@ const Navbar = ({carts}) => {
                         <span className="badge badge-sm indicator-item ">{carts.length}</span>
                     </div>
                     <a>Login</a>
-                    <a className="btn rounded-full bg-linear-to-r/hsl from-blue-500 to-purple-500 text-white">Get Started</a>
+                    <h2 className="btn rounded-full bg-linear-to-r/hsl from-blue-500 to-purple-500 text-white">Get Started</h2>
                 </div>
             </div>
         </div>

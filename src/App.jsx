@@ -9,6 +9,7 @@ import { ToastContainer } from 'react-toastify'
 import Cart from './components/Cart'
 import Steps from './components/Steps'
 import PricingPart from './components/PricingPart'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -36,6 +37,9 @@ function App() {
         <PricingPart></PricingPart>
 
       </div>
+
+
+      <Footer></Footer>
 
       <ToastContainer></ToastContainer>
     </>
