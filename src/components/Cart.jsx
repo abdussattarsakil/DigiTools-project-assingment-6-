@@ -28,6 +28,12 @@ const Cart = ({ carts }) => {
                                 </div>
                             ))
                         }
+
+                        <div className="flex justify-between">
+                            <h2 className="text-xl">Total</h2>
+                            <h2 className="text-xl">${carts.reduce((total, cart) => total + cart.price, 0)}</h2>
+                        </div>
+                        <button className="btn rounded-full w-full bg-linear-to-r/hsl from-blue-500 to-purple-500 text-white">Proceed to Checkout</button>
                     </div>
                 </div>
             </div>
