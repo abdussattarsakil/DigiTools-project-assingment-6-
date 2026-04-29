@@ -74,7 +74,7 @@ const Footer = () => {
             </footer>
 
             <hr className="border-t border-gray-600 my-5" />
-            <div className="flex justify-between">
+            <div className="md:flex justify-between">
                 <p className="">
                     © 2026 Digitools. All rights reserved.
                 </p>
