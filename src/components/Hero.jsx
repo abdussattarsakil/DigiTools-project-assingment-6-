@@ -6,7 +6,7 @@ const Hero = () => {
             {/* left side */}
             <div className="my-auto text-wrap space-y-5">
                 <div className="">
-                    <h2 className="mb-2 badge badge-lg p-4 rounded-full bg-purple-200 text-blue-600"> <span className="rounded-full p-1 bg-linear-to-r/hsl from-blue-500 to-purple-500 "></span>New: AI-Powered Tools Available</h2>
+                    <h2 className="mb-2 badge badge-lg p-4 rounded-full bg-purple-200 text-blue-600 animate-bounce"> <span className="rounded-full p-1 bg-linear-to-r/hsl from-blue-500 to-purple-500 "></span>New: AI-Powered Tools Available</h2>
                     <h1 className="mb-2 text-5xl font-extrabold text-wrap">Supercharge Your <br /> Digital Workflow</h1>
                     <p>Access premium AI tools, design assets, templates, and productivity</p>
                     <p>software—all in one place. Start creating faster today.</p>

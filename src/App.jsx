@@ -8,6 +8,7 @@ import State from './components/State'
 import { ToastContainer } from 'react-toastify'
 import Cart from './components/Cart'
 import Steps from './components/Steps'
+import PricingPart from './components/PricingPart'
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
         </div>
 
         <Steps></Steps>
+        <PricingPart></PricingPart>
 
       </div>
 
